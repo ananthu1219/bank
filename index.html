@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bank Login/Signup</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-blue-50 to-blue-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white shadow-lg rounded-2xl w-full max-w-md p-6">
+    <!-- Tabs -->
+    <div class="flex mb-6 border-b">
+      <button id="loginTab" class="w-1/2 py-2 text-blue-600 border-b-2 border-blue-600 font-semibold">
+        Login
+      </button>
+      <button id="signupTab" class="w-1/2 py-2 text-gray-600 hover:text-blue-600">
+        Signup
+      </button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Account Number</label>
+        <input type="text" placeholder="Enter your account number"
+               class="w-full mt-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Password</label>
+        <input type="password" placeholder="Enter your password"
+               class="w-full mt-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+      </div>
+      <button type="submit"
+              class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+        Login
+      </button>
+    </form>
+
+    <!-- Signup Form -->
+    <form id="signupForm" class="space-y-4 hidden">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Username</label>
+        <input type="text" placeholder="Choose a username"
+               class="w-full mt-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Account Number</label>
+        <input type="text" placeholder="Enter your account number"
+               class="w-full mt-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Password</label>
+        <input type="password" placeholder="Create a password"
+               class="w-full mt-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+      </div>
+      <button type="submit"
+              class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">
+        Signup
+      </button>
+    </form>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
