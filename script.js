@@ -19,9 +19,40 @@
       loginTab.classList.add("text-gray-600");
     });
 
-    function signup(){
-      
+    function signup() {
+      let username = document.getElementById('usernames').value;
+      let accountno = document.getElementById('accountNumbers').value;
+      let password = document.getElementById('passwords').value;
+    
+      let detailObj = {
+        username: username,
+        accountno: accountno,
+        password: password
+      };
+    
+      // Check if "BankUser" already exists
+      let existing = localStorage.getItem('BankUser');
+    
+      if (existing) {
+        // If exists, parse it
+        let existingObj = JSON.parse(existing);
+    
+        if (
+          existingObj.username === username &&
+          existingObj.accountno === accountno &&
+          existingObj.password === password
+        ) {
+          alert('User already exists');
+          return;
+        }
+      }
+    
+      // If no user or different, save new one
+      localStorage.setItem('BankUser', JSON.stringify(detailObj));
+      alert('SignUp Success');
     }
+    
+    
     function login(){
 
     }
