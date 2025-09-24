@@ -53,7 +53,25 @@
     }
     
     
-    function login(){
-
+    function login() {
+      let acno = document.getElementById('accountNumber').value;
+      let pass = document.getElementById('password').value;
+    
+      // Get stored user and parse it
+      let storedUser = JSON.parse(localStorage.getItem('BankUser'));
+    
+      // Check if a user exists
+      if (!storedUser) {
+        alert('No user found. Please signup first.');
+        return;
+      }
+    
+      // Compare input with stored data
+      if (acno == storedUser.accountno && pass == storedUser.password) {
+        alert('Login Success');
+        window.location = 'home.html';
+      } else {
+        alert('Login Failed');
+      }
     }
     
