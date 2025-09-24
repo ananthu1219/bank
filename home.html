@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bank Home Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
+<body class="bg-gray-100 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-800 text-white p-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">My Bank</h1>
+        <button class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded">Logout</button>
+    </nav>
+
+    <!-- Body -->
+    <div class="flex flex-wrap justify-center gap-6 p-6">
+
+        <!-- Deposit Box -->
+        <div class="bg-white rounded-lg shadow-md p-6 w-80">
+            <h2 class="text-2xl font-semibold mb-4 text-blue-800">Deposit</h2>
+            <label for="deposit-amount" class="block mb-1 font-medium">Enter Amount</label>
+            <input type="number" id="deposit-amount" placeholder="Amount" class="w-full border border-gray-300 rounded p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+            <label for="deposit-account-number" class="block mb-1 font-medium">Enter Account No</label>
+            <input type="text" id="deposit-account-number" placeholder="Account Number" class="w-full border border-gray-300 rounded p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded">Deposit</button>
+        </div>
+
+        <!-- Withdraw Box -->
+        <div class="bg-white rounded-lg shadow-md p-6 w-80">
+            <h2 class="text-2xl font-semibold mb-4 text-blue-800">Withdraw</h2>
+            <label for="withdraw-amount" class="block mb-1 font-medium">Enter Amount</label>
+            <input type="number" id="withdraw-amount" placeholder="Amount" class="w-full border border-gray-300 rounded p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+            <label for="withdraw-account-number" class="block mb-1 font-medium">Enter Account No</label>
+            <input type="text" id="withdraw-account-number" placeholder="Account Number" class="w-full border border-gray-300 rounded p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded">Withdraw</button>
+        </div>
+
+    </div>
+
 </body>
 </html>
