@@ -18,3 +18,11 @@
       loginTab.classList.remove("text-blue-600", "border-b-2", "border-blue-600", "font-semibold");
       loginTab.classList.add("text-gray-600");
     });
+
+    function signup(){
+      
+    }
+    function login(){
+
+    }
+    
